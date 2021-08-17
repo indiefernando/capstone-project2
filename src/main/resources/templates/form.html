@@ -6,8 +6,13 @@
 </head>
 <body>
 <h1>Blood Alcohol Content Calculator</h1>
-<form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
-    <p>Gender: <input type="text" th:field="*{gender}" /></p>
+<form action="#" th:action="@{/form}" th:object="${inputVariables}" method="post">
+    <tr>
+        <td>Gender:</td>
+        <td><select name="gender">
+            <option th:each="gender : ${genderList}" th:text="${gender}" />
+        </select>
+    </tr>
     <p>Weight in kilograms: <input type="text" th:field="*{weight}" /></p>
     <p>Number of standard drinks consumed: <input type="text" th:field="*{standardDrinks}" /></p>
     <p>Number of hours since drinking commenced: <input type="text" th:field="*{hoursDrinking}" /></p>

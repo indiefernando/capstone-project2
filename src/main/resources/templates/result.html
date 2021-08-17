@@ -6,10 +6,10 @@
 </head>
 <body>
 <h1>Blood Alcohol Content:</h1>
-<p th:text="'Gender: ' + ${greeting.gender}" />
-<p th:text="'Weight: ' + ${greeting.weight}" />
-<p th:text="'Standard Drinks: ' + ${greeting.standardDrinks}" />
-<p th:text="'Hours Drinking: ' + ${greeting.hoursDrinking}" />
-<a href="/greeting">Submit another calculation</a>
+<p th:text="'Gender: ' + ${inputVariables.gender}" />
+<p th:text="'Weight: ' + ${inputVariables.weight}" />
+<p th:text="'Standard Drinks: ' + ${inputVariables.standardDrinks}" />
+<p th:text="'Hours Drinking: ' + ${inputVariables.hoursDrinking}" />
+<a href="/inputVariables">Submit another calculation</a>
 </body>
 </html>

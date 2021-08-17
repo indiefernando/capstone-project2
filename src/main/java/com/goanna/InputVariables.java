@@ -1,6 +1,6 @@
 package com.goanna;
 
-public class Greeting {
+public class InputVariables {
 
     private String gender;
     private double weight;
