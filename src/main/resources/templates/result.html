@@ -1,15 +1,37 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Blood Alcohol Content Calculator</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        body {
+            margin-left: 35%;
+            margin-top: 5%;
+        }
+
+        p {
+            font-size: 200%;
+            margin-left: 20%;
+            margin-bottom: 5%;
+        }
+
+        h2 {
+            color: darkcyan;
+        }
+
+        a {
+            color: darkcyan;
+        }
+
+    </style>
 </head>
 <body>
 <h1>Blood Alcohol Content:</h1>
-<p th:text="'Gender: ' + ${inputVariables.gender}" />
-<p th:text="'Weight: ' + ${inputVariables.weight}" />
-<p th:text="'Standard Drinks: ' + ${inputVariables.standardDrinks}" />
-<p th:text="'Hours Drinking: ' + ${inputVariables.hoursDrinking}" />
-<a href="/inputVariables">Submit another calculation</a>
+<p th:text="0.0" />
+<h2>Hours until BAC reaches zero:</h2>
+<p th:text= "0.0"/>
+<p></p>
+<a href="/form">Submit another calculation</a>
 </body>
 </html>

@@ -1,11 +1,22 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Blood Alcohol Content Calculator</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        body {
+            margin-left: 30%;
+            margin-top: 5%;
+        }
+        h1 {
+            color: darkcyan;
+        }
+    </style>
 </head>
 <body>
 <h1>Blood Alcohol Content Calculator</h1>
+<p></p>
 <form action="#" th:action="@{/form}" th:object="${inputVariables}" method="post">
     <tr>
         <td>Gender:</td>
@@ -13,6 +24,7 @@
             <option th:each="gender : ${genderList}" th:text="${gender}" />
         </select>
     </tr>
+    <p></p>
     <p>Weight in kilograms: <input type="text" th:field="*{weight}" /></p>
     <p>Number of standard drinks consumed: <input type="text" th:field="*{standardDrinks}" /></p>
     <p>Number of hours since drinking commenced: <input type="text" th:field="*{hoursDrinking}" /></p>
