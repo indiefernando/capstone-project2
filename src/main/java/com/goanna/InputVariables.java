@@ -13,8 +13,6 @@ public class InputVariables {
     private double weight;
     private double standardDrinks;
     private double hoursDrinking;
-    /*double bloodAlcoholContent = getBloodAlcoholContent(gender, weight, standardDrinks, hoursDrinking);
-    */
 
     public Long getId() {
         return id;

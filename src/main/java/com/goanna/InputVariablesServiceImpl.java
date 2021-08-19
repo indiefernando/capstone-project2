@@ -42,4 +42,6 @@ public class InputVariablesServiceImpl implements InputVariablesService {
             return ((10 * inputVariables.getStandardDrinks()) - (7.5 * inputVariables.getHoursDrinking())) / (5.5 * inputVariables.getWeight());
         }
     }
+
+
 }

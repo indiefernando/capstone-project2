@@ -7,6 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.CriteriaBuilder;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,10 +29,17 @@ public class InputVariablesController {
     public String inputSubmit(@ModelAttribute InputVariables inputVariables, Model model) {
         service.saveOrUpdate(inputVariables);
         double bloodAlcoholContent = service.getBloodAlcoholContent(inputVariables);
-        double hoursUntilZero = bloodAlcoholContent / 0.015;
+        String format = "0.000";
+        NumberFormat formatter = new DecimalFormat(format);
+        String newBloodAlcoholContent = formatter.format(bloodAlcoholContent);
 
-        model.addAttribute("bloodAlcoholContent", bloodAlcoholContent);
-        model.addAttribute("hoursUntilZero", hoursUntilZero);
+        double hoursUntilZero = bloodAlcoholContent / 0.015;
+        String format2= "0.0";
+        NumberFormat formatter2 = new DecimalFormat(format2);
+        String newHoursUntilZero = formatter2.format(hoursUntilZero);
+
+        model.addAttribute("newBloodAlcoholContent", newBloodAlcoholContent);
+        model.addAttribute("newHoursUntilZero", newHoursUntilZero);
         return "result";
     }
 
