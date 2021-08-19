@@ -1,9 +1,11 @@
-package com.goanna.repository;
+package com.goanna;
 
-import com.goanna.InputVariables;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-    @Repository
-    public interface InputVariablesRepository extends CrudRepository<InputVariables, Integer> {
+
+@Repository
+public interface InputVariablesRepository extends CrudRepository<InputVariables, Long> {
+
+
 }

@@ -1,11 +1,28 @@
 package com.goanna;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class InputVariables {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String gender;
     private double weight;
     private double standardDrinks;
     private double hoursDrinking;
+    /*double bloodAlcoholContent = getBloodAlcoholContent(gender, weight, standardDrinks, hoursDrinking);
+    */
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public double getHoursDrinking() {
         return hoursDrinking;
@@ -38,4 +55,7 @@ public class InputVariables {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
+
 }
+

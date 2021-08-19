@@ -28,9 +28,9 @@
 </head>
 <body>
 <h1>Blood Alcohol Content:</h1>
-<p th:text="0.0" />
+<p th:text= "${bloodAlcoholContent}"/>
 <h2>Hours until BAC reaches zero:</h2>
-<p th:text= "0.0"/>
+<p th:text= "${hoursUntilZero}"/>
 <p></p>
 <a href="/form">Submit another calculation</a>
 </body>
