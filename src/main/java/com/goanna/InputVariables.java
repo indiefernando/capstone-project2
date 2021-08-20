@@ -54,6 +54,5 @@ public class InputVariables {
         this.weight = weight;
     }
 
-
 }
 

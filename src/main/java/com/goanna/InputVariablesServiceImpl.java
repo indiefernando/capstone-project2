@@ -2,12 +2,12 @@ package com.goanna;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class InputVariablesServiceImpl implements InputVariablesService {
+
     @Autowired
     InputVariablesRepository inputVariablesRepository;
 
@@ -35,7 +35,6 @@ public class InputVariablesServiceImpl implements InputVariablesService {
 
     @Override
     public double getBloodAlcoholContent(InputVariables inputVariables) {
-
         if (inputVariables.getGender().equalsIgnoreCase("Male")) {
             if(inputVariables.getWeight() > 0 && inputVariables.getHoursDrinking() > 0 &&
                 inputVariables.getStandardDrinks() > 0) {
@@ -47,6 +46,4 @@ public class InputVariablesServiceImpl implements InputVariablesService {
             return ((10 * inputVariables.getStandardDrinks()) - (7.5 * inputVariables.getHoursDrinking())) / (5.5 * inputVariables.getWeight());
         }
     }
-
-
 }

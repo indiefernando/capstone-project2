@@ -1,12 +1,9 @@
 package com.goanna;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import javax.persistence.criteria.CriteriaBuilder;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -44,13 +41,11 @@ public class InputVariablesController {
     }
 
     List<String> genderList;
-
     @ModelAttribute
     public void preLoad(Model model) {
         genderList = new ArrayList<>();
         genderList.add("Male");
         genderList.add("Female");
     }
-
 
 }
