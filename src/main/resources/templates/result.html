@@ -24,6 +24,17 @@
             color: darkcyan;
         }
 
+        h3 {
+            font-size: 90%;
+            margin-left: 0%;
+        }
+
+        h4 {
+            font-size: 90%;
+            margin-left: 10%;
+        }
+
+
     </style>
 </head>
 <body>
@@ -31,6 +42,8 @@
 <p th:text= "${newBloodAlcoholContent}"/>
 <h2>Hours until BAC reaches zero:</h2>
 <p th:text= "${newHoursUntilZero}"/>
+<h3>The legal alcohol limit for learner & provisional license holders is 0.</h3>
+<h4>The legal limit for full license holders is 0.05.  </h4>
 <p></p>
 <a href="/form">Submit another calculation</a>
 </body>

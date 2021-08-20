@@ -37,7 +37,12 @@ public class InputVariablesServiceImpl implements InputVariablesService {
     public double getBloodAlcoholContent(InputVariables inputVariables) {
 
         if (inputVariables.getGender().equalsIgnoreCase("Male")) {
-            return ((10 * inputVariables.getStandardDrinks()) - (7.5 * inputVariables.getHoursDrinking())) / (6.8 * inputVariables.getWeight());
+            if(inputVariables.getWeight() > 0 && inputVariables.getHoursDrinking() > 0 &&
+                inputVariables.getStandardDrinks() > 0) {
+                return ((10 * inputVariables.getStandardDrinks()) - (7.5 * inputVariables.getHoursDrinking())) / (6.8 * inputVariables.getWeight());
+            } else {
+                return 0.0;
+            }
         } else {
             return ((10 * inputVariables.getStandardDrinks()) - (7.5 * inputVariables.getHoursDrinking())) / (5.5 * inputVariables.getWeight());
         }
