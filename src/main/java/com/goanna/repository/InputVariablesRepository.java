@@ -1,5 +1,6 @@
-package com.goanna;
+package com.goanna.repository;
 
+import com.goanna.entity.InputVariables;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

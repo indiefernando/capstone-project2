@@ -1,5 +1,7 @@
-package com.goanna;
+package com.goanna.service;
 
+import com.goanna.entity.InputVariables;
+import com.goanna.repository.InputVariablesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;

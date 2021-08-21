@@ -1,5 +1,6 @@
-package com.goanna;
+package com.goanna.service;
 
+import com.goanna.entity.InputVariables;
 import java.util.List;
 
 public interface InputVariablesService {

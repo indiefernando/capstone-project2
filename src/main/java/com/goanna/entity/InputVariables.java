@@ -1,4 +1,4 @@
-package com.goanna;
+package com.goanna.entity;
 
 import javax.persistence.*;
 

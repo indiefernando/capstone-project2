@@ -1,5 +1,7 @@
 package com.goanna;
 
+import com.goanna.controller.InputVariablesController;
+import com.goanna.service.InputVariablesService;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +28,7 @@ class InputVariablesControllerTest {
     List<String> genderList = Arrays.asList("Male", "Female");
 
     @Test
-    void inputSubmit() throws Exception {
+    void statusAndSubmissionOfController() throws Exception {
         ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders.get("/form"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("form"))
