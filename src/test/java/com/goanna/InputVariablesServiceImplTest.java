@@ -19,5 +19,21 @@ class InputVariablesServiceImplTest {
         assertNull(inputVariablesNotInDB);
     }
 
+    @Test
+    void getBloodAlcoholContentWithZeroWeight() {
+        String gender = "Female";
+        double weight = 0;
+        double standardDrinks = 2.0;
+        double hoursDrinking = 1.0;
 
+        InputVariables input = new InputVariables();
+        input.setHoursDrinking(hoursDrinking);
+        input.setWeight(weight);
+        input.setGender(gender);
+        input.setStandardDrinks(standardDrinks);
+
+        double bloodAlcoholContent = inputVariablesService.getBloodAlcoholContent(input);
+
+        assertEquals(Double.POSITIVE_INFINITY, bloodAlcoholContent);
+    }
 }
