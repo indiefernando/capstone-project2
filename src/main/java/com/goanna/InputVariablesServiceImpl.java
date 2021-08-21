@@ -20,7 +20,7 @@ public class InputVariablesServiceImpl implements InputVariablesService {
 
     @Override
     public InputVariables getInputVariablesById(Long id) {
-        return inputVariablesRepository.findById(id).get();
+        return inputVariablesRepository.findById(id).orElse(null);
     }
 
     @Override
