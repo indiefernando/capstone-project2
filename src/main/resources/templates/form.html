@@ -29,7 +29,10 @@
     <p>Weight in kilograms: <input type="text" th:field="*{weight}" /></p>
     <p>Number of standard drinks consumed: <input type="text" th:field="*{standardDrinks}" /></p>
     <p>Number of hours since drinking commenced: <input type="text" th:field="*{hoursDrinking}" /></p>
-    <p><input style="margin-top: 0%; color: darkcyan;" type="submit" value="Submit" /> <input style="margin-top: 0%; color: darkcyan;" type="reset" value="Reset" /></p>
+    <p><input style="margin-top: 0%; color: darkcyan;" type="submit" value="Submit" /> <input style="margin-top: 0%; color: darkcyan;" type="reset" value="Reset" />  </p>
 </form>
+<div class="text-left">
+    <td><a style="background-color: #f0eeef; font-size: 13px; border-color: #6b6769; color: darkcyan; margin-top: -9.5%; margin-left: 42%; width: 20%; height: 30.5px;" th:href="@{/info/}" class="btn btn-primary">Standard Drinks Information</a></td>
+</div>
 </body>
 </html>

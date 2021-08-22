@@ -24,6 +24,11 @@ public class InputVariablesController {
         return "form";
     }
 
+    @GetMapping("/info")
+    public String infoForm(Model model) {
+        return "info";
+    }
+
     @PostMapping("/form")
     public String inputSubmit(@ModelAttribute InputVariables inputVariables, Model model) {
         service.saveOrUpdate(inputVariables);
